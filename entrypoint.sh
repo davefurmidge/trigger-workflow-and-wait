@@ -146,6 +146,7 @@ trigger_workflow() {
   do
     if [ "${wait_workflow}" = true ] 
     then
+      echo "Entering lets_wait function...."
       lets_wait
     fi
     NEW_RUNS=$(get_workflow_runs "$SINCE")
