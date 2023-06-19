@@ -144,7 +144,8 @@ trigger_workflow() {
   NEW_RUNS=$OLD_RUNS
   while [ "$NEW_RUNS" = "$OLD_RUNS" ]
   do
-    if [ "${wait_workflow}" = true ]
+    if [ "${wait_workflow}" = true ] 
+    then
       lets_wait
     fi
     NEW_RUNS=$(get_workflow_runs "$SINCE")
